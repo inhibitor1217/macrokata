@@ -14,7 +14,17 @@ impl Coordinate {
 
 ////////// DO NOT CHANGE ABOVE HERE /////////
 
-// TODO: Create `for_2d!` macro here.
+macro_rules! for_2d {
+    ($d1:ident <$d1type:ty> in $d1range:expr, $d2:ident <$d2type:ty> in $d2range:expr, $loop:block) => {
+        for $d1 in $d1range {
+            let $d1: $d1type = $d1;
+            for $d2 in $d2range {
+                let $d2: $d2type = $d2;
+                $loop
+            }
+        }
+    };
+}
 
 ////////// DO NOT CHANGE BELOW HERE /////////
 
