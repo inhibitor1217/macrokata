@@ -4,7 +4,14 @@ fn print_result(num: i32) {
 }
 ////////// DO NOT CHANGE ABOVE HERE /////////
 
-// TODO: create `math!()` macro.
+macro_rules! math {
+    ($lhs:literal plus $rhs:literal) => {
+        $lhs + $rhs
+    };
+    (square $num:literal) => {
+        $num * $num
+    };
+}
 
 ////////// DO NOT CHANGE BELOW HERE /////////
 
